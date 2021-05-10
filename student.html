@@ -1,0 +1,144 @@
+<html>
+<head> <style type="text/css">
+	body{
+		  background-color: #white;
+  }
+  #centre{
+  background-color: #3a3a3a;
+      height: 126%;
+      width: 60%;
+      float: left;
+      padding-bottom: 44px;
+      position: relative;
+      left: 376px;
+      top: 160px;
+      border-radius: 6px;
+	}
+	#student{
+    color: white;
+  }
+  #radio
+  {
+    color: silver;
+
+  }
+  #button{
+    color: white;
+  }
+  .button{
+    color: white;
+  }
+  #color{
+    color: silver;
+  }
+  .position{
+    position: relative;
+    left: 10px;
+    height: 30px;
+    width: 290px;
+    border-radius: 5px;
+    font-size: 25px;
+  }
+  #courses{
+    color: silver;
+  }
+#Submit{
+  background-color: #3a3a3a;
+  color: white;
+  font-size: 38px;
+  position: relative;
+  left: 380px;
+  border-color: silver;
+}
+#Thanks{
+  position: relative;
+  left: 500px;
+  color: grey;
+}
+#img{
+  position: relative;
+  left :280px;
+}
+</style> </head>
+<body>
+	<div id="centre" >
+   <a href="file:///F:/Site/eduvertex.html"> <img id="img" src="http://lms.eduservex.org/images/logo-login.gif"></a>
+    <h1 id="student">Student's Detail -:</h1>
+    <p id="color">First Name :<input class="position" id="fname" type="text" name="name" placeholder="First Name"></p>
+    <p id="color">Last Name :<input class="position" id="lname"  type="text" name="name" placeholder="Surname"></p>
+    <p id="color"> Email Address :<input  class="position" id="email" type="text"  name="name" placeholder="For ex:123@abc.com"></p>
+    <p id="radio"><p  id="radio">Gender :</p>
+     <div class="form-check">
+  <input class="button" id="male-radio" type="radio" name="radio" >
+  <label class="button" >
+    male
+  </label>
+</div>
+<div class="form-check">
+  <input class="button" id="female-radio" type="radio" name="radio"  checked>
+  <label class="button" for="flexRadioDefault2">
+    female
+  </label>
+</div>
+    <p  id="radio">Phone No. :<input  class="position" id="phone" type="text" name="name"></p>
+    <h1  id="student">Education Detail -:</h1>
+    <form id="courses">
+      <input  type="checkbox" id="autocheck" name="courses">B.tech
+      <input type="checkbox" name="courses">B.com
+        <input  type="checkbox" id="autocheck" name="courses">M.tech<br>
+      <input  type="checkbox" name="courses">M.com<br>
+      <input  type="checkbox" name="courses">Fashion
+      <input  type="checkbox" name="courses">Agriculture
+    </form>
+     <h1  id="student">Family Details -:</h1>
+    <select>
+       <option>Father Name</option>
+       <option>Mother Name</option>
+       <option>Brother Name</option>
+       <option>Sister Name</option>
+       <option>Guardian's Name</option>
+       <input class="position" type="text" id="gname" name="gname">
+       <p  id="radio">Phone No. :<input  class="position" id="phone" type="text" name="name"></p>
+       <input id="Submit" type="button" name="Submit" value="Submit">
+       <input id="Auto-Fill" type="button" name="Auto-Fill" onclick="myFunction()" value="Submit">
+       <p id="Thanks">Thanks for Registering yourself 😊😊😊😊</p>
+     </select>
+	</div>
+  <script>
+setTimeout(function myFunction() {
+  var checkBox = document.getElementById("autocheck");
+  if (checkBox.checked == false){
+    checkBox.checked = true;
+  } else {
+     checkBox.checked = false;
+  }
+},13000)
+
+setTimeout(function myFunction(){
+          document.getElementById("fname").value= "Sahil";
+          
+          },3000)
+setTimeout(function myFunction(){
+          document.getElementById("lname").value= "Sharma";
+          
+          },5000)
+setTimeout(function myFunction(){
+          document.getElementById("email").value= "Sahilsharma7429@gmail.com";
+          
+          },7000)
+setTimeout(function myFunction() {
+  var checkBox = document.getElementById("male-radio");
+  if (checkBox.checked == false){
+    checkBox.checked = true;}
+  },9000)
+setTimeout(function myFunction(){
+          document.getElementById("phone").value= "9876543210";
+          
+          },11000)
+setTimeout(function myFunction(){
+          document.getElementById("gname").value= "XYZ Sharma";
+          
+          },15000)
+</script>
+</body>
+</html>
