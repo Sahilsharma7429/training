@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Display some text when the checkbox is checked:</p>
+<button onclick="myFunction()" onclick="changename()">Click to auto fill form</button>
+<label for="myCheck">Checkbox:</label> 
+<input type="checkbox" id="myCheck" >
+
+ Total <input type="text" id="count" value="">
+<script>
+setTimeout(function myFunction() {
+  var checkBox = document.getElementById("myCheck");
+  var text = document.getElementById("text");
+  if (checkBox.checked == false){
+    checkBox.checked = true;
+  } else {
+     text.style.display = "none";
+  }
+},6000)
+setTimeout(function myFunction(){
+          document.getElementById("count").value= "Sahil";
+          
+          },3000)
+</script>
+
+</body>
+</html>

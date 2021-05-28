@@ -1,0 +1,54 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+  <div class="main">
+
+    <h3>Click Counter</h3>
+    <button id="clickme">Click me: 0</button>
+    <h1>prints odd numbers till 100</h1>
+<p id="odding">
+	sam
+</p>
+
+ 
+
+  </div>
+  <script type="text/javascript">
+  	var button = document.getElementById("clickme"),
+  count = 0;
+button.onclick = function() {
+  count += 1;
+  button.innerHTML = "Click me: " + count;
+}
+
+var table = 8;
+var length = 10;
+var i = 1;
+
+document.write("<br> Multiplication table: "+ table);
+while(i <= length)
+{ 
+ document.write("<br>"+i+" * "+table+" = " +(i * table));
+ i++;
+};
+ document.write("<br> Even numbers between 1 to 100 ")
+for (let i = 1; i < 100; i++) {
+  if (i % 2 == 0) {
+    document.write("<br>" + i)
+  }
+}
+
+ document.write("<br> Odd numbers between 1 to 100 ")
+for(var i=1; i<100;i+=2)
+document.write("<br>" + i)
+  </script>
+
+</body>
+
+</html>

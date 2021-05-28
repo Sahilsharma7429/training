@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <title>Calculator</title>
+  </head>
+  <body>
+    <form action="#">
+    <div class="container" >
+<div class="row px-2 justify-content-center" >
+  
+    <div class="col-4 align-self-center py-2" >
+       <div id="result"  class="alert  alert-primary" role="alert">
+            Result will appear here
+        </div>
+    </div>
+</div>
+<div class="row px-2 justify-content-center" >
+  
+    <div class="col-4 align-self-center" >
+      <form action="#">
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Number 1</label>
+                <input type="number" class="form-control" placeholder="Enter first number" id="number1" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Number 2</label>
+                <input type="number" class="form-control" placeholder="Enter second number" id="number2">
+            </div>
+        <div class="row">
+    <div class="col-5 px-5 align-self-start">
+    <button type="button col-3 align-self-start" class="btn btn-outline-dark"  onclick="sum()" name="calculation_type" id="calculate_sum">Sum</button>
+    </div>
+    <div class="col-5 px-5 align-self-center">
+  <button type="button col-1 align-self-end" onclick="mult()" class="btn btn-outline-dark">Multiply</button>
+    </div>
+    
+  </div>
+          <div class="row py-4">
+    <div class="col-5 px-5 align-self-start">
+    <button type="button col-3 align-self-start" onclick="subtract()" class="btn btn-outline-dark">Subtract</button>
+    </div>
+    <div class="col-5 px-5 align-self-center">
+  <button type="button col-1 align-self-end" onclick="divide()" class="btn btn-outline-dark">Divide</button>
+    </div>
+    
+  </div>
+    </div>
+</div>
+</div>
+</form>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+    -->
+    <script type="text/javascript">
+
+           document.getElementById("number1").value = 10;
+        document.getElementById("number2").value = 20;
+
+         function sum() {
+            var number1 = parseInt(document.getElementById("number1").value);
+            var number2 = parseInt(document.getElementById("number2").value);
+
+            var sum= number1+ number2;
+            document.getElementById("result").innerHTML = sum;
+        }
+                 function mult() {
+            var number1 = parseInt(document.getElementById("number1").value);
+            var number2 = parseInt(document.getElementById("number2").value);
+
+            var mult= number1* number2;
+            document.getElementById("result").innerHTML = mult;
+          }
+                   function divide() {
+            var number1 = parseInt(document.getElementById("number1").value);
+            var number2 = parseInt(document.getElementById("number2").value);
+
+            var divide= number1 / number2;
+            document.getElementById("result").innerHTML = divide;
+          }
+        function subtract() {
+            var number1 = parseInt(document.getElementById("number1").value);
+            var number2 = parseInt(document.getElementById("number2").value);
+
+            if (number2> number1) 
+            {
+              var subtract= number2- number1;
+            }
+            else {
+              var subtract= number1- number2;
+            }
+            
+            document.getElementById("result").innerHTML = subtract;
+        }
+          </script>
+  </body>
+</html>
