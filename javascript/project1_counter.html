@@ -1,0 +1,67 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <title></title>
+  <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+  <style type="text/css">
+    body{
+      background-color: lightgrey;
+    }
+    .main{
+      position: relative;
+      left:   35%;
+      top: 200px;
+      width:  100vh;
+    }
+    h3{
+      font-size: 50px;
+      text-shadow: 2px 2px black;
+      color: white;
+      
+      font-weight: bolder;
+    }
+    p{
+      font-size: 100px;
+      font-weight: 500;
+      color: darkgrey;
+      padding-left: 120px;
+
+    }
+    button{
+      padding: 9px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="main">
+    <h3 >Click Counter</h3>
+    <p id="box">   0</p>
+    <button id="clickme" class="btn btn-light px-4" onclick="add()">Increase</button>
+    <button id="clickme" class="btn btn-light px-4" onclick="sub()">Decrease</button>
+    <button id="clickme" class="btn btn-light px-5" onclick="reset()">Reset</button>
+
+  </div>
+  <script type="text/javascript">
+  	var button = document.getElementById("box"),
+  count = 0;
+  function add(){
+  count += 1;
+  document.getElementById("box").innerHTML = count;
+}
+function sub(){
+  count -= 1;
+  document.getElementById("box").innerHTML = count;
+}
+function reset(){
+  count = 0;
+  document.getElementById("box").innerHTML = count ;
+}
+</script>
+</body>
+</html>
