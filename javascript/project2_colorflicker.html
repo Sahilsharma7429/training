@@ -6,7 +6,7 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-  <title></title>
+  <title>ColorFlicker</title>
   <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
 	<title></title>
 	<style type="text/css">
@@ -32,10 +32,8 @@
 	let index=0;
 	function coloring(){
 		index=(index+1)%colors.length;
- 	
+ 		document.body.style.backgroundColor = colors[index];
 
-		document.body.style.backgroundColor = colors[index];
-		
 	}
 </script>
 </body>
