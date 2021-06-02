@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Accordian</title>
+	<style type="text/css">
+		#main{
+			position: relative;
+			left: 200px;
+		}
+		.Section{
+			background-color: lightgrey;
+  			color: #444;
+  			width: 70%;
+  			border: none;
+  			height: 20px;
+  			padding: 2px;
+		}
+		.Section:hover {
+  			background-color: grey;
+		}
+		.panel {
+  			padding: 0 18px;
+  			background-color: white;
+  			display: none;
+  			overflow: hidden;
+}
+	</style>
+</head>
+<body>
+	<div id="main">
+
+<button id="Section" onclick="show(0)" class="Section">Option A</button>
+<div id="panel1" class="panel">This is content of Option A</div>
+<button id="Section" onclick="show(1)" class="Section">Option B</button>
+<div id="panel2" class="panel">This is content of Option B</div>
+<button id="Section" onclick="show(2)" class="Section">Option C</button>
+<div id="panel3" class="panel">This is content of Option C</div>
+</div>
+<script type="text/javascript">
+	var panels=["panel1","panel2","panel3"];
+	let index=0;
+	function show(a)
+	{
+		for (var i = 0; i < panels.length; i++) {
+			document.getElementById(panels[i]).style.display = "none";
+		}
+		document.getElementById(panels[a]).style.display = "block";
+	}
+	
+</script>
+</body>
+</html>
