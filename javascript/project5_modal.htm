@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Modal</title>
+	<style type="text/css">
+		#modal{
+			width: 500px;
+			height: 300px;
+			z-index: 1;
+			color: darkgrey;
+			background-color: white;
+			padding: 4px;
+			opacity: 6px;
+			display: none;
+			  border: 2px solid black;
+  			outline: rgba(0,0,0,.3) solid 100vh;
+  			margin: auto; 
+  			text-align: center;
+		}
+		.topright {
+  position: absolute;
+  right: 32%;
+  top: 40px;
+  border: 2px solid darkgrey;
+  cursor: pointer;
+}
+
+	</style>
+</head>
+<body><div id="main">
+	<button id="open">Open Modal</button>
+<div id="modal"><strong>Modal</strong>
+<span onclick="document.getElementById('YourModalBox').style.display='none'" style="color: black" id="close" class="close-button topright"><b>CLOSE</b></span>
+<div style="color: black"><li>
+	<ul>This is content of MOdal, Please click at close or outside the modal to close it.</ul>
+	<ul>This is content of MOdal, Please click at close or outside the modal to close it.</ul>
+	<ul>This is content of MOdal, Please click at close or outside the modal to close it.</ul>
+</li></div>
+</div>
+</div>
+<script type="text/javascript">
+	var modal = document.getElementById("modal");
+	
+	var open = document.getElementById("open");
+	var close = document.getElementById("close");
+	open.onclick = function() {
+  modal.style.display = "block";
+}
+close.onclick = function() {
+  modal.style.display = "none";
+}
+
+</script>
+</body>
+</html>
