@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<input type="text" id="task" placeholder="Enter something here" >
+<button id="adding" onclick="adddata()">ADD</button>
+<div>
+	<h3>To-Do-List</h3>
+	<div >
+		<ul id="array">
+			
+		</ul>
+	</div>
+</div>
+<del>hello</del>
+<script type="text/javascript">
+	 var count=0;
+	function adddata(){
+ 	task = document.getElementById('task').value;
+ 	var remove = document.getElementById("remove");
+ 	var countid = document.getElementById("count");
+ 	
+
+ 	
+ 	document.getElementById("array").innerHTML += `<li onclick="this.style.textDecoration = 'line-through' " id=`+count+'>'+ task + `<button id="remove" onclick="this.style.display = 'none' ">Remove</button></li>`;
+console.log(count);
+//close.onclick = function() {
+//  count.style.display = "none";
+}
+count++;
+
+ 
+</script>
+</body>
+</html>
