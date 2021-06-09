@@ -1,0 +1,9 @@
+make a gitbash at location of project.
+use command 
+>>   $ start ,
+this will open command prompt at your current directory
+then in cmd use command
+>>   cd AppName (use any name for app, it makes a folder which include all data of app.)
+use command
+>>   expo start     //this command is to start a project, u will be given choice to choose template for app, pick first one (Blank) to get empty template.
+now u will get QR code scanner, scan it in Expo app and u can see interface of your app.
