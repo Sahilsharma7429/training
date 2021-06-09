@@ -1,35 +1,129 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<style type="text/css">
+#main{
+	background-color: cadetblue;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	border: 5px solid dodgerblue;
+	padding: 10px;
+	height: 50vh;
+	width: 50%;
+	}
+#task
+	{
+	 padding: 0;
+	height: 30px;
+	position: relative;
+	left: 30%;
+	outline: none;
+	border: 1px solid #cdcdcd;
+	border-color: rgba(0, 0, 0, .15);
+	background-color: white;
+	font-size: 16px;
+	}
+#adding{
+	padding: 8px 15px;
+	font-size: 10px;
+	position: relative;
+	left: 30%;
+	text-align: center;
+	cursor: pointer;
+	outline: none;
+	color: #fff;
+	background-color: blueviolet;
+	border: none;
+	border-radius: 10px;
+	box-shadow: 0 5px #999;
+	}
+
+#adding:hover {background-color: slateblue;}
+
+#adding:active {
+  	background-color: slateblue;
+  	box-shadow: 0 5px #666;
+  	transform: translateY(4px);
+	}
+#delete{
+	padding: 8px 15px;
+	font-size: 10px;
+	position: relative;
+	left: 30%;
+	text-align: center;
+	cursor: pointer;
+	outline: none;
+	color: #fff;
+	background-color: slategrey;
+	border: none;
+	border-radius: 10px;
+	box-shadow: 0 5px #999;
+	}
+#delete:hover {background-color: orangered;}
+#delete:active {
+  	background-color: orangered;
+  	box-shadow: 0 5px #666;
+  	transform: translateY(4px);
+	}
+#counting{
+	font-family: cursive;
+	font-size: 15px;
+	position: absolute;
+	left: 30%;
+	color: whitesmoke;
+}
+#list{
+	background-color: cadetblue;
+	position: absolute;
+	left: 50%;
+	top: 80%;
+	transform: translate(-50%, -50%);
+	border: 5px solid dodgerblue;
+	padding: 10px;
+	height: 50vh;
+	width: 50%;
+}
+	</style>
+    <title></title>
 </head>
 <body>
-<input type="text" id="task" placeholder="Enter something here" >
-<button id="adding" onclick="adddata()">ADD</button>
-<div>
-	<h3>To-Do-List</h3>
-	<div >
-		<ul id="array">
-			
-		</ul>
+	<div id="main">
+		<input type="text" id="task" onfocus="this.value=''" placeholder="Enter something here" >
+		<button id="adding" onclick="adddata()">ADD</button>
+		<p id="counting">Task for the day are: 0</p>
+    		<div id="list">
+        		<ul id="array">
+           			
+        		</ul>
+    		</div>
 	</div>
-</div>
-<del>hello</del>
-<script type="text/javascript">
-	 var count=0;
-	function adddata(){
- 	task = document.getElementById('task').value;
- 	var remove = document.getElementById("remove");
- 	var countid = document.getElementById("count");
- 	
+	
 
- 	
- 	document.getElementById("array").innerHTML += `<li onclick="this.style.textDecoration = 'line-through' " id=`+count+'>'+ task + `<button id="remove" onclick="this.style.display = 'none' ">Remove</button></li>`;
-console.log(count);
-//close.onclick = function() {
-//  count.style.display = "none";
+
+
+	<script type="text/javascript">
+     var count=0;
+     var array = document.getElementById("array");
+
+
+
+    function adddata(){
+    task = document.getElementById('task').value;    
+    document.getElementById("array").innerHTML += `<li onclick="this.style.textDecoration = 'line-through' " " id=`+count+'>'+ task + `<button id="delete" onclick= "remove(this)" >Remove</button></li>`;
+count++
+document.getElementById("counting").innerHTML = "Task for the day are:"+ count;
 }
-count++;
+
+var remove = function(li){
+    array.removeChild(li.parentNode);
+    count--;
+    document.getElementById("counting").innerHTML = "Task for the day are:"+ count;
+}
+
+
+
 
  
 </script>
